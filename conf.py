@@ -1,8 +1,13 @@
-TOKEN = 'bot_token_fron_botfather'
-admin_id = [461964422, 712304626]
-insta_log = "login for instagram account"
-insta_pass = 'password for instagram account'
 import gspread
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+bot_token = os.getenv('TOKEN')
+admin_id = [461964422, 712304626]
+insta_log = os.getenv('INSTA_LOG')
+insta_pass = os.getenv('INSTA_PASS')
 
 sa = gspread.service_account(filename=".config/gspread/service_account.json")
 sh = sa.open("applications")
