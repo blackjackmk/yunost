@@ -6,7 +6,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMar
 
 from main import dp, bot
 import conf
-from conf import admin_id, TOKEN, acc
+from conf import admin_id, acc, bot_token
 from insta import send_insta
 
 class FSMAdmin(StatesGroup):
@@ -111,7 +111,7 @@ async def save_photo(message: types.Message, state: FSMContext):
     foto_id = message.photo[-1].file_id
     file = await bot.get_file(foto_id)
     foto_path = file.file_path
-    foto_url = "https://api.telegram.org/file/bot"+TOKEN+"/"+foto_path
+    foto_url = "https://api.telegram.org/file/bot"+bot_token+"/"+foto_path
     await FSMAdmin.insta_spam_text.set()
     await message.answer("Готово. Тепер текст для direct")
 

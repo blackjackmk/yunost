@@ -1,25 +1,18 @@
-import
--pip install aiogram
--pip install gspread
--pip install selenium
-configure
--conf.py: TOKEN
--conf.py: admin_id через /get_id
--conf.py: insta_log - логін від інсти
--conf.py: insta_pass - пароль від інсти
--conf.py: account - інста з підписниками
+## Installation
 
-deploy
-	+https://support.google.com/drive/answer/2494892 
-		google sheet:How to Use Google Sheets With Python (2022)
-		deploy on VPS: 
-https://www.serverhunter.com/ 
-Python Selenium #10 Как запустить Selenium ChromeDriver на VPS сервере(хостинге)
--файли загружаєм з хостинга через wget
--окремо через wget загрузити .config/gspread/source.json
--браузер ставити на систему а не python venv
--python3.8+
--браузер тільки firefox
--все решту робити по відео
-https://tengfone.medium.com/cheap-vps-hosting-for-telegram-bots-inactive-sites-e775a134d6aa 
+1. **Install Python**: Download and install Python (3.8+) from the official website.
+
+2. **Install Mozilla Firefox**: Download and install Firefox browser from the official website. Install it on system not virtual environment!
+
+3. **Install Requirements**: Run `pip install -r requirements.txt` in your command line to install the required dependencies.
+
+4. **Deploy Google Spreadsheet**: Set up your spreadsheet according to your requirements.
+	- https://www.youtube.com/watch?v=bu5wXjz2KvU
+
+5. **Set Environment Variables**: Set the following environment variables:
+   - `TOKEN` = bot_token_fron_botfather
+   - `INSTA_LOG` = login_for_instagram_account
+   - `INSTA_PASS` = password_for_instagram_account
+
+5. **Run main.py**: Execute `python main.py` in your command line to run the main Python script.
 

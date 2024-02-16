@@ -1,5 +1,5 @@
 import conf
-from conf import TOKEN, admin_id
+from conf import bot_token
 from aiogram import Bot, executor, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
@@ -7,7 +7,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 store=MemoryStorage()
 
-bot = Bot(token=TOKEN)
+bot = Bot(token=bot_token)
 dp = Dispatcher(bot, storage=store)
 
 @dp.message_handler(commands=['start'])
