@@ -1,4 +1,4 @@
-#Yunost
+# Yunost
 
 ## Description
 Telegram bot, the task of which is to inform potential guests about upcoming event.
