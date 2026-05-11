@@ -1,10 +1,7 @@
 # Yunost
 
 ## Description
-Telegram bot, the task of which is to inform potential guests about upcoming event.
-Also it send notification on Instagram. 
-List of users it get from cloud Google Sheet by API. 
-And also he allow to get free entry ticket for party.
+A Telegram bot designed to inform potential guests about upcoming events and automate Instagram notifications. It fetches user lists dynamically via the Google Sheets API and allows users to claim free entry tickets.
 
 ## Screenshots
 ![yunost1](assets/yunost1.webp)
@@ -33,5 +30,4 @@ And also he allow to get free entry ticket for party.
    - `INSTA_LOG` = login_for_instagram_account
    - `INSTA_PASS` = password_for_instagram_account
 
-5. **Run main.py**: Execute `python main.py` in your command line to run the main Python script.
-
+6. **Run main.py**: Execute `python main.py` in your command line to run the main Python script.

@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 bot_token = os.getenv('TOKEN')
-admin_id = [461964422, 712304626]
+admin_id_str = os.getenv('ADMIN_IDS', '')
+admin_id = [int(x.strip()) for x in admin_id_str.split(',')] if admin_id_str else []
 insta_log = os.getenv('INSTA_LOG')
 insta_pass = os.getenv('INSTA_PASS')
 
@@ -29,7 +30,3 @@ def add_user(id):
         for user in acc:
             users_list.write(str(user)+"\n")
     users_list.close()
-
-
-
-
